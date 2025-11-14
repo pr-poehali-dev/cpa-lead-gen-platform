@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "Get active offers",
+      "method": "GET",
+      "path": "/?status=active",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create new offer",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Test Offer",
+        "description": "Test offer description",
+        "payout": 1000,
+        "category": "Test",
+        "advertiser_id": 1
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "offer_id": "number",
+        "pixel_code": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

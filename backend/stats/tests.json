@@ -1,0 +1,27 @@
+{
+  "tests": [
+    {
+      "name": "Get webmaster stats",
+      "method": "GET",
+      "path": "/?user_id=1&role=webmaster&period=30",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "total_clicks": "number",
+        "total_conversions": "number",
+        "total_earnings": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get advertiser stats",
+      "method": "GET",
+      "path": "/?user_id=1&role=advertiser&period=30",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "total_clicks": "number",
+        "total_conversions": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

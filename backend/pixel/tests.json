@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "name": "Get pixel script",
+      "method": "GET",
+      "path": "/?action=pixel",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Track click",
+      "method": "GET",
+      "path": "/?action=click&offer_id=1&wm_id=1",
+      "expectedStatus": 200
+    }
+  ]
+}
